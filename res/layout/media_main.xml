@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.dismantle.mediagrid.MediaMainActivity$PlaceholderFragment" >
+
+    <LinearLayout
+        android:id="@+id/layout_path"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#336699" >
+
+        <TextView
+            android:id="@+id/txt_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/path"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#F3F3F3"
+        android:divider="@android:drawable/divider_horizontal_dark"
+        android:orientation="horizontal"
+        android:showDividers="middle" >
+
+        <Button
+            android:id="@+id/btn_upload"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_basic_bg"
+            android:text="@string/upload"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_mkdir"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_basic_bg"
+            android:text="@string/mkdir"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <com.dismantle.mediagrid.RTPullListView
+        android:id="@+id/file_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/layout_tools"
+        android:layout_below="@id/layout_path"
+        android:animationCache="false"
+        android:divider="#000000"
+        android:dividerHeight="1dp"
+        android:scrollingCache="false" >
+    </com.dismantle.mediagrid.RTPullListView>
+
+</RelativeLayout>
